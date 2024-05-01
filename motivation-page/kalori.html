@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalori Hesaplayıcı</title>
+    <style>
+        body {
+    background-image: url(assets/img/Boxing_Men_Two_Human_back_To_hit_552122_1366x768.jpg);
+    font-family: Arial, sans-serif; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.hesaplayici-container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); 
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+input, select {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 15px;
+    width: 150px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6a0dad;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #7c1dc6; 
+}
+
+.sonuc {
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="hesaplayici-container">
+        <h1>Kalori Hesaplayıcı</h1>
+        <form id="kaloriFormu" action="kalori.js">
+            <label for="yas">Yaş (yıl)</label>
+            <input type="number" name="yas" id="yas" min="1" required>
+    
+            <label for="cinsiyet">Cinsiyet</label>
+            <select name="cinsiyet" id="cinsiyet" required>
+                <option value="erkek">Erkek</option>
+                <option value="kadın">Kadın</option>
+            </select>
+
+            <label for="kilo">Kilo (kg)</label>
+            <input type="number" name="kilo" id="kilo" min="1" required>
+
+            <label for="boy">Boy (cm)</label>
+            <input type="number" name="boy" id="boy" min="1" required>
+
+            <label for="aktivite">Aktivite Seviyesi</label>
+            <select name="aktivite" id="aktivite" required>
+                <option value="hareketsiz">Hareketsiz (az veya hiç egzersiz yapmayan)</option>
+                <option value="hafifEgzersiz">Hafif Egzersiz (haftada 1-3 gün hafif egzersiz/yürüyüş)</option>
+                <option value="ortaEgzersiz">Orta Düzey Egzersiz (haftada 3-5 gün orta düzey egzersiz)</option>
+                <option value="yoğunEgzersiz">Yoğun Egzersiz (haftada 6-7 gün yoğun egzersiz)</option>
+                <option value="çokYoğunEgzersiz">Çok Yoğun Egzersiz (çok yoğun egzersiz/aktif iş)</option>
+            </select>
+
+            <button type="submit">Hesapla</button>
+        </form>
+
+        <div id="kaloriSonucu" class="sonuc"></div>
+    </div>
+
+    <script src="kalori.js"></script>
+</body>
+</html>

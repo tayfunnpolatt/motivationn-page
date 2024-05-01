@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Motivasyon Sayfası</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>
+    body {
+      font-family:fantasy;
+      margin: 0;
+      padding: 0;
+    }
+    nav {
+      background-color: #000;
+      padding: 20px;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      background-color: #6a0dad; 
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 10px;
+      margin: 0 10px;
+      transition: background-color 0.3s ease;
+    }
+    nav a:hover {
+      background-color: #7c1dc6; 
+    }
+    .container-header {
+      background-color: #000;
+      color: #fff;
+      padding: 50px;
+      text-align: center;
+      font-size: 28px;
+      animation: ledAnimation 10s infinite;
+    }
+    .container-header img {
+      width: 100%;
+      max-width: 500px;
+      margin-top: 20px;
+    }
+    .container-sec {
+      background-color: #000;
+      color: #fff;
+      padding: 100px;
+      text-align: center;
+    }
+    .container-sec i {
+      margin: 0 10px;
+    }
+    .footer {
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+    @keyframes ledAnimation {
+      0% { color:black; }
+      25% { color:white; }
+      50% { color:black; }
+      75% { color: white; }
+      100% { color: white; }
+   
+    }
+  </style>
+</head>
+<body>
+  <audio id="backgroundMusic" autoplay loop>
+    <source src="assets/sounds/Lil Durk - Finesse Out The Gang Way feat. Lil Baby (Official Music Video).mp3" type="audio/mp3">
+  </audio>
+
+  <nav>
+    <a href="index.html">Anasayfa</a>
+    <a href="#contact">İletişim</a>
+    <a href="quotes.html" target="_blank">Sözler</a>
+    <a href="timer.html" target="_blank">Boxing Timer</a>
+    <a href="kalori.html" target="_blank">Kalori Hesaplama</a>
+  </nav>
+  
+  <header>
+    <div class="container-header">
+      <h1>Bu site senin için tasarlandı,kendin ile tanış!!</h1>
+      <p>“Timsahlarla güreştim, balinalarla boğuştum, yıldırımlara kelepçe takıp hapse attım. Ben kötüyüm. Geçen hafta bir kayayı öldürdüm, bir taşı yaraladım, bir köprüyü hastanelik ettim. İlaçları bile hasta ettim!”</p>
+      <img src="assets/img/photo-1591117207239-788bf8de6c3b.avif" alt="sound">
+    </div>
+  </header>
+  
+  <section>
+    <div id="contact" class="container-sec">
+      <i class="fas fa-map-pin"></i> Cankaya/Ankara
+      <i class="far fa-envelope"></i> tayfun43y@gmail.com
+      <i class="fas fa-phone"></i> +905050505050
+    </div>
+  </section>
+  
+  <footer class="footer">
+    <div class="small m-0">Telif Hakkı © Tayfun Polat 2024</div>
+  </footer>
+
+  <script>
+    document.getElementById('backgroundMusic').addEventListener('ended', function() {
+      this.currentTime = 0;
+      this.play();
+    });
+  </script>
+</body>
+</html>
